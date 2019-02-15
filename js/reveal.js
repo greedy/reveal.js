@@ -4326,6 +4326,11 @@
 					index += offset;
 				}
 
+				var maxIndex = parseInt( fragments [ fragments.length - 1 ].getAttribute( 'data-fragment-index' ), 10 );
+				if ( index > maxIndex ) {
+					index = maxIndex;
+				}
+				
 				var fragmentsShown = [],
 					fragmentsHidden = [];
 
